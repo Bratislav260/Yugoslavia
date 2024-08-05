@@ -1,12 +1,12 @@
 import logging
-from config import dp, bot
+from config import dp
 from aiogram.utils import executor
-from handlers import commands, echo
+from handlers import commands, massage
 
 
 commands.register_commands(dp)
 
-echo.register_echo(dp)
+massage.register_massage(dp)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
