@@ -40,3 +40,4 @@ def register_commands(dp: Dispatcher):
     dp.register_message_handler(meme_handler, commands=['meme', 'photo'])
     dp.register_message_handler(sender_handler, commands=['file'])
 
+
