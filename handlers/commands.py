@@ -14,7 +14,6 @@ async def start_handler(message: types.Message):
 async def info_handler(message: types.Message):
     await message.answer("Это бот, имитирующий Темми из игры 'Undertale'")
 
-
 async def meme_handler(message: types.Message):
     path = "media/"
     files = []

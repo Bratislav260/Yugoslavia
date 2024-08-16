@@ -1,7 +1,8 @@
 import logging
+from aiogram.contrib.middlewares import fsm
 from config import dp, bot
 from aiogram.utils import executor
-from handlers import commands, massage, quizzz, game
+from handlers import commands, massage, quizzz, game, FSM_reg, FSN_online_store
 from db import db_main
 
 admin = [2112097330]
@@ -20,8 +21,11 @@ async def on_shutdown(_):
 commands.register_commands(dp)
 quizzz.register_quizzz(dp)
 game.register_game(dp)
+FSM_reg.register_fsm(dp)
+FSN_online_store.register_fsn_store(dp)
 
 massage.register_massage(dp)
+
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)

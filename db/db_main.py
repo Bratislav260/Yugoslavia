@@ -11,6 +11,5 @@ async def sql_creat():
     cur.execute(queries.CREATE_TABLE_REGISTRATIONTE)
     db.commit()
 
-
 # async def sql_insert(telegram_id, ):
 #     cur.execute(queries.INSERT_INTO_TABLE_REGISTRATION, __parameters=(telegram))
