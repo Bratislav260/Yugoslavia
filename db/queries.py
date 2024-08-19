@@ -44,7 +44,7 @@ INSERT_PRODUCTS_DETAILS = """
 """
 
 CREATE_TABLE_PRODUCTS_COLLECTION = """
-    CREATE TABLE IF NOT EXISTS products_details
+    CREATE TABLE IF NOT EXISTS products_collection
     (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     collection VARCHAR(255),
@@ -53,6 +53,6 @@ CREATE_TABLE_PRODUCTS_COLLECTION = """
 """
 
 INSERT_PRODUCTS_COLLECTION = """
-    INSERT INTO products_details(collection, id_product)
+    INSERT INTO products_collection(collection, id_product)
     VALUES (?, ?)
 """

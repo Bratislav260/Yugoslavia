@@ -10,6 +10,7 @@ async def sql_creat():
         print("База данных подключена")
     cur.execute(queries.CREATE_TABLE_PRODUCTS)
     cur.execute(queries.CREATE_TABLE_PRODUCTS_DETAILS)
+    cur.execute(queries.CREATE_TABLE_PRODUCTS_COLLECTION)
     db.commit()
 
 
