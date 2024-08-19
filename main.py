@@ -2,7 +2,7 @@ import logging
 from aiogram.contrib.middlewares import fsm
 from config import dp, bot
 from aiogram.utils import executor
-from handlers import commands, massage, quizzz, game, FSM_reg, FSN_online_store
+from handlers import commands, massage, quizzz, game, FSM_reg, FSN_online_store, notification
 from db import db_main
 
 admin = [2112097330]
@@ -22,7 +22,8 @@ commands.register_commands(dp)
 quizzz.register_quizzz(dp)
 game.register_game(dp)
 FSM_reg.register_fsm(dp)
-FSN_online_store.register_fsn_store(dp)
+FSN_online_store.store_fsm(dp)
+notification.register_notification(dp)
 
 massage.register_massage(dp)
 

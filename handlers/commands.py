@@ -36,7 +36,7 @@ async def sender_handler(message: types.Message):
 def register_commands(dp: Dispatcher):
     dp.register_message_handler(start_handler, commands=['start'])
     dp.register_message_handler(info_handler, commands=['info'])
-    dp.register_message_handler(meme_handler, commands=['meme', 'photo'])
+    dp.register_message_handler(meme_handler, commands=['meme'])
     dp.register_message_handler(sender_handler, commands=['file'])
 
 
