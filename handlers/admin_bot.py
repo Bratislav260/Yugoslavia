@@ -25,6 +25,9 @@ async def filter_words(message: types.Message): # добавлен способ 
             await message.answer(f"Не ругайся!\nПридуприждаем, после 3 трех нарушении ты быдешь забанен! {pre[1]}")
             await check_pre(message)
             if users_pre[message.from_user.id] == 3:
+                ban_duration = 3600  # 1 час
+                until_date = int(time.time()) + ban_duration
+                await bot.kick_chat_member(message.chat.id, message.from_user.id, until_date)
                 await message.answer(f"Пользователь {message.from_user.first_name} "
                                      f"забанен за нарушении правил сообщество!")
             await message.delete()
